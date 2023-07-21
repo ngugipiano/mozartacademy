@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 16px;
+      color: #999;
+      transition: all 0.2s ease;
+      pointer-events: none;
+    }
+
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -20px;
+      left: 0;
+      font-size: 12px;
+      color: #333;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid #999;
+      padding: 8px 0;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .testimonials-strip {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+}
+
+.testimonials-container {
+  display: inline-flex;
+}
+
+.testimonial-card {
+  width: 250px;
+  height: 250px;
+  background-color: #f4f4f4;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.testimonial-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  text-align: center;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.swipe-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prev-button,
+.next-button {
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #bbb;
+}
+  </style>
+</head>
+<body>
+  <form>
+    <div class="form-group">
+      <input type="text" id="name" required>
+      <label for="name">Name</label>
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" required>
+      <label for="email">Email</label>
+    </div>
+    <div class="form-group">
+      <input type="text" id="subject" required>
+      <label for="subject">Subject</label>
+    </div>
+    <div class="form-group">
+      <textarea id="message" required></textarea>
+      <label for="message">Message</label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+<div class="testimonials-strip">
+    <div class="testimonials-container">
+      <div class="testimonial-card">
+        <img src="testimonial1.jpg" alt="Testimonial 1" class="testimonial-photo">
+        <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+        <p class="testimonial-name">John Doe</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="testimonial2.jpg" alt="Testimonial 2" class="testimonial-photo">
+        <p class="testimonial-text">Sed pulvinar nunc leo, vel dignissim elit rutrum vel. Phasellus malesuada cursus quam vitae euismod.</p>
+        <p class="testimonial-name">Jane Smith</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="testimonial3.jpg" alt="Testimonial 3" class="testimonial-photo">
+        <p class="testimonial-text">Vestibulum sodales pellentesque metus id rhoncus. Nullam a consequat tellus. Sed quis enim ac orci aliquam viverra.</p>
+        <p class="testimonial-name">David Johnson</p>
+      </div>
+      <!-- Add more testimonial cards here -->
+    </div>
+    <div class="swipe-buttons">
+      <button class="prev-button">&#8249;</button>
+      <button class="next-button">&#8250;</button>
+    </div>
+  </div>
+
+  
+</body>
+<script src="assets/js/main.js"></script>
+</html>

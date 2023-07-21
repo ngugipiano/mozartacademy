@@ -252,3 +252,23 @@ $("body").on('click', '.mfuDeleteBtn', function(e) {
 });
 
 })()
+
+
+const aboutContainers = document.querySelectorAll('.about-container');
+
+// Attach a click event listener to each "about-container"
+aboutContainers.forEach(container => {
+  const header = container.querySelector('.about-header');
+  const content = container.querySelector('.about-content');
+  const title = container.querySelector('.about-title');
+
+  // Function to toggle the visibility of the content when the header is clicked
+  function toggleContent() {
+    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    title.textContent = content.style.display === 'none' ? '+ Example Headline' : '- Example Headline';
+  }
+
+  // Add event listener to the header
+  header.addEventListener('click', toggleContent);
+});
+

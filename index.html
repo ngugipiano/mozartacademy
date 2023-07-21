@@ -27,94 +27,7 @@
 
 <body>
 
-  <!--/ Form Search Star /
-
-  <div class="click-closed"></div>
-
-  <div class="box-collapse">
-    <div class="title-box-d">
-      <h3 class="title-d">Search Property</h3>
-    </div>
-    <span class="close-box-collapse right-boxed bi bi-x"></span>
-    <div class="box-collapse-wrap form">
-      <form class="form-a">
-        <div class="row">
-          <div class="col-md-12 mb-2">
-            <div class="form-group">
-              <label class="pb-2" for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="Type">Type</label>
-              <select class="form-control form-select form-control-a" id="Type">
-                <option>All Type</option>
-                <option>Single</option>
-                <option>Self Contain</option>
-                <option>Double</option>
-                <option>1 Bedroom</option>
-                <option>2 Bedroom</option>
-                <option>2+ Bedcroom</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="city">City</label>
-              <select class="form-control form-select form-control-a" id="city">
-                <option>Country</option>
-                <option>Nyeri</option>
-                <option>Nakuru</option>
-                <option>Nairobi</option>
-                <option>Mombasa</option>
-                <option>Nyahururu</option>
-                <option>Eldoret</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bedrooms">Bedrooms</label>
-              <select class="form-control form-select form-control-a" id="bedrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="bathrooms">Bathrooms</label>
-              <select class="form-control form-select form-control-a" id="bathrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-6 mb-2">
-            <div class="form-group mt-3">
-              <label class="pb-2" for="price">Price Range</label>
-              <select class="form-control form-select form-control-a" id="price">
-                <option>Any</option>
-                <option>2,000-4,000</option>
-                <option>4,000 - 7,000</option>
-                <option>7,000 - 10,000</option>
-                <option>10,000 - 15,000</option>
-                <option>15,000+</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Search Property</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div> -->
+  
 
 <!---- Navbar ----------->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
@@ -135,7 +48,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="#">About</a>
+            <a class="nav-link " href="about.html">About</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -156,11 +69,9 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#">Contact Us</a>
+            <a class="nav-link " href="#">Registration</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Certification</a>
-          </li>
+        
 
   <li class="nav-item">
             <a class="nav-link " href="#">Orchestra</a>
@@ -170,10 +81,15 @@
         </ul>
       </div>
 
-      <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+   <button type="button" onclick="openWhatsApp()" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
         <i class="bi bi-whatsapp"></i>
       </button>
-      
+
+
+
+
+
+
       <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
       Enroll here
       </button>
@@ -276,6 +192,7 @@
   <main id="main">
 
     <section class="featured-properties-area">
+    
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -291,7 +208,11 @@
             </div>
 
             <div class="row">
-
+ <div class="section-title">
+          <span>MUSIC LESSONS</span>
+          <h2>LESSONS</h2>
+          <p>Take a look at our diverse instrument lessons.</p>
+        </div>
                 <!-- Single Featured Property -->
                 <div class="col-12 col-md-6 col-xl-4">
                     <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="100ms">
@@ -310,9 +231,12 @@
                         <!-- Property Content -->
 
                         <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+                            <!-- <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000 <span class="capsule" > per module </span></h5>-->
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Get ready to tickle the ivories and unlock your musical potential with our exhilarating piano lessons! Whether you're a beginner or already have some experience, our passionate instructors are here to guide you on a melodic journey like no other... 
+                            <!--Immerse yourself in the captivating world of the piano as you learn to dance your fingers across the keys, unleashing enchanting melodies and harmonies. From classical masterpieces to modern tunes, our lessons combine technique, creativity, and a whole lot of fun! Prepare to embrace the rhythm, ignite your imagination, and discover the true joy of making music. Join us and let the piano be your ultimate expression of soulful melodies and captivating rhythms. Let's play and create music that resonates with your heart
+                            
+                            --> <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -328,7 +252,7 @@
                             <img src="assets/img/childrenlearn-1.jpg" alt="">
 
                             <div class="list-price">
-                                <p>Violin</p>
+                                <p>Violin / Viola</p>
                             </div>
 
                         </div>
@@ -336,9 +260,11 @@
                         <!-- Property Content -->
 
                         <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+             
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Welcome to the enchanting world of violin music! Unlock your inner maestro and embark on a musical journey like no other. Our vibrant violin lessons blend the art of playing with the joy of learning. Whether you're a budding musician or simply ...
+                            <!--seeking a harmonious hobby, our expert instructors will guide you through the mesmerizing melodies and intricate techniques. Get ready to soar through scales, dance with your bow, and compose your own symphony. Join us and discover the magic of the violin – where every note becomes a stepping stone towards musical mastery. Let's create beautiful music together! -->
+                            <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p> 
                             
                         </div>
                     </div>
@@ -362,9 +288,10 @@
                         <!-- Property Content -->
 
                        <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+         
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Experience the timeless elegance and enchanting melodies of the classical guitar! Our classical guitar lessons offer a captivating journey for both beginners and experienced players. Delve into the rich heritage of this beautiful instrument as you ...<!--learn to pluck each string with precision and grace. Our expert instructors will guide you through fingerstyle techniques, intricate melodies, and the art of interpretation. From masterpieces by renowned composers to exploring your own musical expression, our lessons will transport you to a world of refined beauty and captivating rhythms. Join our passionate community of classical guitar enthusiasts, where you'll immerse yourself in the melodic tapestry of centuries-old compositions and create your own musical stories. Let's embark on a journey of musical excellence and let the classical guitar be your gateway to artistic expression 
+                            --> <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -378,10 +305,10 @@
                         <!-- Property Thumbnail -->
 
                         <div class="property-thumb">
-                            <img src="assets/img/piano1.jpg" alt="">
+                            <img src="assets/img/singer.jpg" alt="">
 
                             <div class="list-price">
-                                <p>Piano</p>
+                                <p>Voice</p>
                             </div>
 
                         </div>
@@ -389,9 +316,10 @@
                         <!-- Property Content -->
 
                         <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Unleash the power of your voice and let your melodies soar with our exhilarating voice lessons! Get ready to embark on a captivating musical journey where you'll explore the full potential of your vocal cords. Whether you're a shower singer or a ... <!--hidden diva, our expert vocal coaches are here to help you find your unique voice and develop your vocal range, control, and expression. From pop anthems to soulful ballads, we'll guide you through vocal exercises, breath control techniques, and performance skills that will leave you feeling confident and ready to take the stage. Join our vibrant community of aspiring singers, where harmonies are born, confidence flourishes, and dreams turn into reality. Let's turn up the volume, ignite your passion, and together, let your voice be the instrument that captivates hearts and moves the world -->
+                            <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -404,10 +332,10 @@
                         <!-- Property Thumbnail -->
 
                         <div class="property-thumb">
-                            <img src="assets/img/childrenlearn-1.jpg" alt="">
+                            <img src="assets/img/organ.jpg" alt="">
 
                             <div class="list-price">
-                                <p>Violin</p>
+                                <p>Organ</p>
                             </div>
 
                         </div>
@@ -415,9 +343,9 @@
                         <!-- Property Content -->
 
                         <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Step into the magnificent world of organ music and unleash your inner virtuoso! Our organ lessons are a thrilling journey that will transport you to grand cathedrals and majestic concert halls. Get ready to embrace the power of the pipes, as our passionate...<!-- instructors guide you through the secrets of this awe-inspiring instrument. From the thundering bass to the delicate harmonies, you'll learn to command the organ with finesse and create captivating melodies that resonate through the air. Whether you're a novice or have some experience, our lessons are designed to inspire, challenge, and nurture your musical talent. Let's embark on a musical adventure together and discover the unparalleled magic of the organ -->
+                             <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -430,10 +358,10 @@
                         <!-- Property Thumbnail -->
 
                         <div class="property-thumb">
-                            <img src="assets/img/guitarslide-2.jpg" alt="">
+                            <img src="assets/img/Celloslide1.jpg" alt="">
 
                             <div class="list-price">
-                                <p>Guitar</p>
+                                <p>Cello</p>
                             </div>
 
                         </div>
@@ -441,9 +369,11 @@
                         <!-- Property Content -->
 
                        <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Discover the soulful and captivating world of the cello! Dive into the rich melodies and embrace the resonant depths of this majestic instrument. Our cello lessons offer an exciting and immersive experience for beginners and seasoned players...
+                            <!-- alike. Unleash your inner musician as our expert instructors guide you through bowing techniques, finger placements, and the art of crafting beautiful tones. From classical masterpieces to contemporary tunes, we'll explore a repertoire that will ignite your passion for music. Join us and become a part of a vibrant cello community, where you'll discover the joy of creating harmonies that stir the soul. Let's embark on a melodious adventure together and let the cello be your voice of expression! -->
+                            <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -456,10 +386,10 @@
                         <!-- Property Thumbnail -->
 
                         <div class="property-thumb">
-                            <img src="assets/img/piano1.jpg" alt="">
+                            <img src="assets/img/saxophone.jpg" alt="">
 
                             <div class="list-price">
-                                <p>Piano</p>
+                                <p>Saxophone</p>
                             </div>
 
                         </div>
@@ -467,9 +397,11 @@
                         <!-- Property Content -->
 
                         <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Discover the captivating world of the saxophone and let your melodies take flight! Our saxophone lessons offer a dynamic and enjoyable experience for beginners and experienced players alike... <!--
+                       Dive into the versatility of this remarkable instrument as our expert instructors guide you through the fundamentals of breath control, fingering techniques, and expressive phrasing. From soulful ballads to lively pop tunes, you'll learn to create beautiful tones and captivating melodies. Join our vibrant saxophone community, where passion for music is celebrated, skills are honed, and friendships are forged. Let's embark on a melodic adventure together, where the saxophone becomes your voice of expression and every note resonates with joy 
+                       --><br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -482,10 +414,10 @@
                         <!-- Property Thumbnail -->
 
                         <div class="property-thumb">
-                            <img src="assets/img/childrenlearn-1.jpg" alt="">
+                            <img src="assets/img/trumpet.jpg" alt="">
 
                             <div class="list-price">
-                                <p>Violin</p>
+                                <p>Trumpet/Trombone</p>
                             </div>
 
                         </div>
@@ -493,9 +425,11 @@
                         <!-- Property Content -->
 
                         <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+         
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">Unleash your musical potential with our brass and woodwind lessons! From the bold and vibrant sound of the trumpet, to the rich and resonant melodies of the trombone, and the elegance of the brass instruments, we offer...
+                            <!-- a journey into the world of expressive music. Whether you choose the triumphant trumpet, the deep tones of the trombone, or the enchanting clarinet, our expert instructors will guide you in mastering your chosen instrument. Join us and let your passion soar as you embrace the joy of brass and woodwind performance -->
+                             <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -508,10 +442,10 @@
                         <!-- Property Thumbnail -->
 
                         <div class="property-thumb">
-                            <img src="assets/img/guitarslide-2.jpg" alt="">
+                            <img src="assets/img/clarinet.jpg" alt="">
 
                             <div class="list-price">
-                                <p>Guitar</p>
+                                <p>Flute/Clarinet</p>
                             </div>
 
                         </div>
@@ -519,9 +453,12 @@
                         <!-- Property Content -->
 
                        <div class="property-content">
-                            <h5 class="mb-3"> <i class="bi bi-cash"></i> KES 7,200- 10,000</h5>
+ 
                             <p class="location">Preparatory grade - Grade six</p>
-                            <p class="house-description">Each module has 12-18 classes Integer nec bibendum lacus. Suspendisse <br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
+                            <p class="house-description">
+Unleash your musical talents with our flute and clarinet lessons! Discover the enchanting melodies of the flute, where delicate tones and ethereal sounds come alive. Dive into the versatile world of the clarinet... 
+<!-- exploring rich timbres and expressive playing. Our expert instructors will guide you in mastering these captivating instruments, from proper finger placement to breath control. Whether you choose the enchanting flute or the versatile clarinet, let the music flow through you as you embark on a journey of musical expression. Join us and let your melodies soar
+--><br><br><span class="color-b"><i class="bi bi-caret-down"></i> More info</span></p>
                             
                         </div>
                     </div>
@@ -539,6 +476,59 @@
         </div>
     </section>
 
+
+    
+
+ <!-- ======= About Section ======= -->
+    <section id="mini-about" class="mini-about">
+      <div class="container">
+
+        <div class="row justify-content-end">
+          <div class="col-lg-11">
+            <div class="row justify-content-end">
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box py-5">
+                      <i class="bi bi-people-fill"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="125" class="purecounter">0</span>
+                  <p>Students since establishment</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box py-5">
+                      <i class="bi bi-person-check-fill"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="6" class="purecounter">0</span>
+                  <p>Tutors</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box pb-5 pt-0 pt-lg-5">
+            <i class="bi bi-music-note-beamed"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="12" class="purecounter">0</span>
+                  <p>Instruments</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box pb-5 pt-0 pt-lg-5">
+              <i class="bi bi-calendar"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="5" class="purecounter">0</span>
+                  <p>Years in service</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
     <section class="call-to-action-area bg-fixed bg-overlay-black" style="background-image: url(assets/img/orchestraslide1.jpg)">
         <div class="container h-100">
             <div class="row align-items-center h-100">
@@ -549,7 +539,7 @@
                         </h2>
                         
                         <h6>
-                          Discovering and nurturing talents<!--at the comfort of your home-->.
+                          Discovering and nurturing talents.
                         </h6>
 
                         <a href="#" class="btn south-btn mt-5">Enroll</a>
@@ -562,222 +552,351 @@
 
 
 
-    <section class="ftco-section">
-        <div class="container">
+  <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
 
-          <div class="row justify-content-center">
-            <div class="col-md-8 mb-5 text-center section-heading">
-              <h2 class="mb-4">Testimonials</h2>
-              <p class="mb-2">Feedback from our honoured students and parents </p>
+        <div class="section-title">
+          <span>GALLERY</span>
+          <h2>GALLERY</h2>
+          <p>Take a look at our community and leave a comment.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Learners</li>
+              <li data-filter=".filter-card">Instruments</li>
+              <li data-filter=".filter-web">Orchestra</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/Cellist.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+  
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
-          <!--
-
-          <div class="row d-flex">
-
-            <div class="col-md-4 d-flex">
-              <div class="blog-entry bg-dark align-self-stretch">
-                <a href="#" class="block-20" style="background-image: url('assets/img/bg-img/feature2.jpg');">
-                </a>
-                <div class="text p-4 d-block">
-                  <h3 class="heading mt-3"><a href="#">Bedsitter @ KES 10,000</a></h3>
-                  <div class="meta mb-3">
-                    <div><a href="#">Mercy Wangiri Appartments</a></div><br>
-                    <div><a href="#">Nyeri, Kangemi</a></div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/clarinetist.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+          
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
+          </div>
 
-            <div class="col-md-4 d-flex">
-              <div class="blog-entry bg-dark align-self-stretch">
-                <a href="#" class="block-20" style="background-image: url('assets/img/bg-img/feature1.jpg');">
-                </a>
-                <div class="text p-4 d-block">
-                  <h3 class="heading mt-3"><a href="#">Bedsitter @ KES 10,000</a></h3>
-                  <div class="meta mb-3">
-                    <div><a href="#">Mercy Wangiri Appartments</a></div><br>
-                    <div><a href="#">Nyeri, Kangemi</a></div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/trumpeterboy.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+         
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
+          </div>
 
-            <div class="col-md-4 d-flex">
-              <div class="blog-entry bg-dark align-self-stretch">
-                <a href="#" class="block-20" style="background-image: url('assets/img/bg-img/feature3.jpg');">
-                </a>
-                <div class="text p-4 d-block">
-                  <h3 class="heading mt-3"><a href="#">Bedsitter @ KES 10,000</a></h3>
-                  <div class="meta mb-3">
-                    <div><a href="#">Mercy Wangiri Appartments</a></div><br>
-                    <div><a href="#">Nyeri, Kangemi</a></div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/pianolearning.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+          
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
-            
-            <div class="col-md-4 d-flex">
-              <div class="blog-entry bg-dark align-self-stretch">
-                <a href="#" class="block-20" style="background-image: url('assets/img/bg-img/feature2.jpg');">
-                </a>
-                <div class="text p-4 d-block">
-                  <h3 class="heading mt-3"><a href="#">Bedsitter @ KES 10,000</a></h3>
-                  <div class="meta mb-3">
-                    <div><a href="#">Mercy Wangiri Appartments</a></div><br>
-                    <div><a href="#">Nyeri, Kangemi</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
 
-            <div class="col-md-4 d-flex">
-              <div class="blog-entry bg-dark align-self-stretch">
-                <a href="#" class="block-20" style="background-image: url('assets/img/bg-img/feature1.jpg');">
-                </a>
-                <div class="text p-4 d-block">
-                  <h3 class="heading mt-3"><a href="#">Bedsitter @ KES 10,000</a></h3>
-                  <div class="meta mb-3">
-                    <div><a href="#">Mercy Wangiri Appartments</a></div><br>
-                    <div><a href="#">Nyeri, Kangemi</a></div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/guitarslide-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+          
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
+          </div>
 
-            <div class="col-md-4 d-flex">
-              <div class="blog-entry bg-dark align-self-stretch">
-                <a href="#" class="block-20" style="background-image: url('assets/img/bg-img/feature3.jpg');">
-                </a>
-                <div class="text p-4 d-block">
-                  <h3 class="heading mt-3"><a href="#">Bedsitter @ KES 10,000</a></h3>
-                  <div class="meta mb-3">
-                    <div><a href="#">Mercy Wangiri Appartments</a></div><br>
-                    <div><a href="#">Nyeri, Kangemi</a></div>
-                  </div>
-                </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/orchestraslide1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+          
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+   <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/violin-slide2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+          
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/childrenlearn-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+          
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/pianoslide1.jpg "class="img-fluid" alt="">
+            <div class="portfolio-info">
+          
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="project-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+           
+
+         
+
+        </div>
+
+      </div> 
+    </section> <!--End Portfolio Section -->
+
+
+<section class="ftco-section container-fluid position-terms" >
+
+        <div class="container">      
+              
+   <h2 class="mb-4">Testimonials</h2>
+              <p class="mb-2">Feedback from our honoured students and parents </p>  
+          
+<div class="inner-container">
+         
+<div class="card-container">
+
+  <div class="card">
+    <div class="card-image">
+    <img src="assets/img/" alt="Image 1">
+  </div>
+    <div class="card-text">
+  
+ 
+
+    <h6><i>"Discovering Mozart academy has seen me advance immensely in my ventures in the violin, piano and guitar. I began sightreading especially for the violin and the community here always keeps you on check so I must practice'</i></h6>
+
+         <p>Emmanuel Ngugi: Learner</p>
+    </div>
+  </div>
+
+   <div class="card">
+    <div class="card-image">
+    <img src="assets/img/" alt="Image 1">
+  </div>
+    <div class="card-text">
+  
+ 
+
+    <h6><i>"Discovering Mozart academy has seen me advance immensely in my ventures in the violin, piano and guitar. I began sightreading especially for the violin and the community here always keeps you on check so I must practice'</i></h6>
+
+         <p>Emmanuel Ngugi: Learner</p>
+    </div>
+  </div>
+
+   <div class="card">
+    <div class="card-image">
+    <img src="assets/img/" alt="Image 1">
+  </div>
+    <div class="card-text">
+  
+ 
+
+    <h6><i>"Discovering Mozart academy has seen me advance immensely in my ventures in the violin, piano and guitar. I began sightreading especially for the violin and the community here always keeps you on check so I must practice'</i></h6>
+
+         <p>Emmanuel Ngugi: Learner</p>
+    </div>
+  </div>
+
+  
+
+</div>
+
+   </div> 
+  </div>
+
+</section> 
+
+
+
+
+
+
+
+    <section id="contact" class="contact container-fluid position-terms">
+      <div class="container">
+
+        <div class="section-title">
+  
+          <h2>Contact Us</h2>
+          <p>Drop us a message or comment</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Rm 206, 2nd Floor :Geomerc Centre <br>
+                Nafrom St Along Magadi Road <br>                
+                 Ongata Rongai <br>
+              Kajiado, Kenya
+                </p>
               </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@mozartacademy.co.ke</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+ 2547 27 238-647
+<br></p>
+              </div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.261721345783!2d36.75746597412649!3d-1.3979166459218604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05dd2a58fde9%3A0xd7ff66d3b1f6131c!2sGEOMERC%20CENTRE!5e0!3m2!1sen!2ske!4v1689833328281!5m2!1sen!2ske" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
           </div>
-        </div>
-    </section> -->
-    <!-- Main Footer Area --
-    <footer class="footer-area section-padding-100-0 bg-dark gradient-background-overlay">
-    
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row container">
 
-                    <!-- Single Footer Widget --
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-1">
-                            <!-- Widget Title --
-                            <div class="widget-title">
-                                <h6>About Us</h6>
-                            </div>
-
-                            <h6 class="mb-4 text-white">Maskani House Finder</h6>
-
-                            <div class="address">
-                                <h6><img src="img/icons/phone-call.png" alt=""> +45 677 8993000 223</h6>
-                                <h6><img src="img/icons/envelope.png" alt=""> office@template.com</h6>
-                                <h6><img src="img/icons/location.png" alt=""> Main Str. no 45-46, </h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget --
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title --
-                            <div class="widget-title">
-                                <h6>Properties</h6>
-                            </div>
-                            <!-- Office Hours --
-                            <div class="address useful-links-nav">
-                                <h6><a href="#">Single</a></h6>
-                                <h6><a href="#">Bedsitter</a></h6>
-                                <h6><a href="#">Double</a></h6>
-                                <h6><a href="#">1 Bedroom</a></h6>
-                                <h6><a href="#">2 Bedroom</a></h6>
-                                <h6><a href="#">2+ Bedroom</a></h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget --
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title --
-                            <div class="widget-title">
-                                <h6>Useful Links</h6>
-                            </div>
-                            <!-- Nav --
-                            <div class="address useful-links-nav d-flex align-items-center">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Properties</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Sign up</a></li>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget --
-                    <div class="col-12 col-sm-6 col-xl-3">
-                        <div class="footer-widget-area mb-100">
-                            <!-- Widget Title --
-                            <div class="widget-title">
-                                <h6>Featured Properties</h6>
-                            </div>
-
-                            <!-- Featured Properties Slides --
-                            <div class="assets/img/bg-img/feature1.jpg">
-                                
-                                <div class="single-featured-properties-slide">
-                                    <a href="#"><img src="assets/img/bg-img/feature1.jpg" alt=""></a>
-                                </div>
-                                <!-- Single Slide
-                                 Single Slide 
-                                <div class="single-featured-properties-slide">
-                                    <a href="#"><img src="assets/img/bg-img/feature1.jpg" alt=""></a>
-                                </div>
-                                
-                                <div class="single-featured-properties-slide">
-                                    <a href="#"><img src="assets/img/bg-img/feature1.jpg" alt=""></a>
-                                </div>
-                              --
-                            </div>
-
-                        </div>
-                    </div>
-
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="https://trevysedge.netlify.app/forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
                 </div>
-            </div>
+                <div class="form-group col-md-6 mt-3 mt-md-0">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
         </div>
-        <br><br>
-     -->
+
+      </div>
+    </section>
+  <!-- End Contact Section -->
+
+
+
+
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact" id="footer-logo">
+        <a href="home.html" class="logo"><img src="assets/img/logonoBG.png" alt="" class="img-fluid"></a>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="login.html">Blog</a></li>
+                 <li><i class="bx bx-chevron-right"></i> <a href="#">ABRSM Certification</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Help and FAQs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Registration</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Partner with us</a></li>
+        
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Read more</h4>
+            <ul>
+             <li><i class="bx bx-chevron-right"></i> <a href="404.html">Benefits of learning music</a></li>           
+              <li><i class="bx bx-chevron-right"></i> <a href="404.html">History of classical music</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="404.html">Fun facts</a></li>
+     
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter to receive updates from us. Subscription is free, no advertisements.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+
+
+
+
+
+
+
+
+
         <!-- Copywrite Text -->
         <div class="copywrite-text d-flex align-items-center justify-content-center">Mozart Academy of Music
 <br>        
         Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 
         </div>
-    </footer>
+        </div>
+      </div>
+    </div>
+
+   
+  </footer><!-- End Footer -->
+
+        
+
   </main>
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+    <script src="assets/js/main.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+
+
+  
+  <script>
+    function openWhatsApp() {
+      window.open('https://wa.me/+254727238647', '_blank');
+    }
+</script>
 
 </body>
 
