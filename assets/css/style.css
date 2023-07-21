@@ -2144,10 +2144,7 @@ padding: 40px;
 }
 
 
-.container{ 
-  overflow:hidden !important;
 
-}
 
 .inner-container{
   display: flex;
