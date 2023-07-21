@@ -1417,6 +1417,7 @@ img {
     padding: 30px;
     width: 100%;
     background-color: #ececec;
+    overflow: hidden;
 
   }
   
