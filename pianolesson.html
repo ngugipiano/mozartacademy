@@ -55,17 +55,17 @@
             <a class="nav-link  active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lessons</a>
             <div class="dropdown-menu">
               <a class="dropdown-item " href="#">Piano</a>
-              <a class="dropdown-item " href="#">Organ</a>
-              <a class="dropdown-item " href="#">Cello</a>
-              <a class="dropdown-item " href="#">Violin</a>
-              <a class="dropdown-item " href="#">Viola</a>
-              <a class="dropdown-item " href="#">Guitar</a>
-              <a class="dropdown-item " href="#">Saxophone</a>
-              <a class="dropdown-item " href="#">Trumpet</a>
-              <a class="dropdown-item " href="#">Clarinet</a>
-              <a class="dropdown-item " href="#">Recorder</a>
-              <a class="dropdown-item " href="#">Flute</a>
-              <a class="dropdown-item " href="#">Voice</a>
+              <a class="dropdown-item " href="organlesson.html">Organ</a>
+              <a class="dropdown-item " href="cellolessons.html">Cello</a>
+              <a class="dropdown-item " href="violinlessons.html">Violin</a>
+              <a class="dropdown-item " href="violalesson.html">Viola</a>
+              <a class="dropdown-item " href="guitarlessons.html">Guitar</a>
+              <a class="dropdown-item " href="saxlessons.html">Saxophone</a>
+              <a class="dropdown-item " href="trumpetlessons.html">Trumpet</a>
+              <a class="dropdown-item " href="clarinetlessons.html">Clarinet</a>
+              <a class="dropdown-item " href="recorderlessons.html">Recorder</a>
+              <a class="dropdown-item " href="flutelessons.html">Flute</a>
+              <a class="dropdown-item " href="voicelessons.html">Voice</a>
             </div>
           </li>
           <li class="nav-item">
@@ -104,6 +104,8 @@
   </div>
    
    <!-- MAIN SECTION------------>
+<div class="success-message" id="successMessage"></div>
+<div class="error-message" id="errorMessage"></div>
 
 <div class= "container">
 
@@ -115,7 +117,8 @@
                             
                             
       </p>
-      <a href="#" class="instrument-card-button">Enroll now</a>
+      <button class="instrument-card-button" type="button" onclick="openModal()">Enroll</button>
+    
     </div>
   </div>
 
@@ -150,7 +153,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@mozartacademy.co.ke</p>
+                <p>mozartacademy17@gmail.com</p>
               </div>
 
               <div class="phone">
@@ -220,11 +223,11 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li> 
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Registration Terms</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Help and FAQs</a></li>             
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Partner with us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">ABRSM Certification</a></li>
+                 <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li> 
+            <li><i class="bx bx-chevron-right"></i> <a href="registration.html">Registration Terms</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="hfaqs.html">Help and FAQs</a></li>             
+            <li><i class="bx bx-chevron-right"></i> <a href="partner.html">Partner with us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="abrsm.html">ABRSM Certification</a></li>
         
             </ul>
           </div>
@@ -232,9 +235,10 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Read more</h4>
             <ul>
-             <li><i class="bx bx-chevron-right"></i> <a href="404.html">Benefits of learning music</a></li>           
-              <li><i class="bx bx-chevron-right"></i> <a href="404.html">History of classical music</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="404.html">Fun facts</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://www.classicfm.com/music-news/listening-help-students-learn-study/">Benefits of learning music</a></li>           
+            <li><i class="bx bx-chevron-right"></i> <a href="https://en.wikipedia.org/wiki/Classical_music">History of classical music</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://www.classicfm.com/discover-music/latest/incredible-facts/">Fun facts</a></li>
+   
      
             </ul>
           </div>
@@ -273,6 +277,79 @@
 
   </main>
 
+<!-------MODALS-------------------------------------------->
+
+<!-- Modal -->
+<div class="modal">
+    <div class="modal-content">
+     <button type="button" onclick="closeModal()">Cancel</button>
+        <h5 class="modal-title-header">Piano Lessons Enrollment Form</h5>
+        <form action="submit_enrollment.php" method="post" id="enrollmentForm">
+            <label for="student_name">Student Name:</label>
+            <input type="text" id="student_name" name="student_name" required>
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+
+            <label for="guardian_phone_number">Guardian's Phone Number:</label>
+            <input type="tel" id="guardian_phone_number" name="guardian_phone_number" required>
+
+            <label for="email_address">Email Address:</label>
+            <input type="email" id="email_address" name="email_address" required>
+
+            <label for="residence">Residence:</label>
+            <input type="text" id="residence" name="residence" required>
+<hr>
+              <label for="level">Instrument Level:</label>
+            <select id="level" name="level" required>
+                <option value="guitar">Beginner</option>
+                <option value="violin">Intermediate</option>
+                 <option value="piano">Advanced</option>
+                 </select>
+
+            <label for="instrument">Add another Instrument:</label>
+            <select id="instrument" name="instrument" required>
+                <option value="guitar">Guitar</option>
+                <option value="violin">Violin</option>
+                 <option value="piano">Organ</option>
+                <option value="guitar">Cello</option>
+                <option value="violin">Viola</option>
+                 <option value="piano">Voice</option>
+                <option value="guitar">Trumpet</option>
+                <option value="violin">Flute</option>
+                 <option value="piano">Trombone</option>
+                <option value="guitar">Saxophone</option>
+                <option value="violin">Clarinet</option>
+                <!-- Add other instruments to the dropdown as needed -->
+            </select><br><br>
+<label>
+        <input type="checkbox" name="terms" required>
+        I have read and agree to the <a href="registration.html" target="_blank">registration terms</a>.
+    </label>
+    <br><br>
+            
+
+            <div class="buttons">
+                <input type="submit" value="Enroll">
+               
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Enroll Button (Can be placed anywhere in the page) -->
+
+
+<!-- Success and Error Messages -->
+
+
+<!-- JavaScript for Modal Control and Form Submission -->
+<script src="scripts.js"></script>
+
+
+<!------------------------------------------------------------------------------------------>
+
+
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -288,6 +365,32 @@
     <script src="assets/js/main.js"></script>
   
   <script>
+
+
+
+function openModal() {
+    document.querySelector('.modal').style.display = 'flex';
+}
+
+// Function to close the modal
+function closeModal() {
+    document.querySelector('.modal').style.display = 'none';
+}
+
+// Function to handle form submission
+document.getElementById('enrollmentForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Replace this part with your backend code to handle form submission and display success/error messages.
+    // You can use AJAX to send form data to the server and handle the response to show messages accordingly.
+    document.getElementById('successMessage').textContent = 'Successful, we will contact you shortly!';
+    document.getElementById('successMessage').style.display = 'block';
+setTimeout(function() {
+    document.getElementById('successMessage').style.display = 'none';
+}, 5000);
+
+    closeModal(); // Close the modal after successful submission (remove this line if not needed)
+});
+
 
   function redirectToPage(pageUrl) {
     // Redirect to the specified page
