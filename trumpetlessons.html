@@ -94,7 +94,7 @@
 
 
 
-      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+      <button type="button" onclick="openModalUni()" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
       Enroll here
       </button>
 
@@ -102,9 +102,9 @@
   </nav><!-- End Header/Navbar -->
 
 
- <div class="banner">
-    <div class="banner-title">PIANO</div>
-    <div class="banner-subtitle">ABRSM upto Diploma Course available</div>
+ <div class="banner trumpet">
+    <div class="banner-title">TRUMPET / TROMBONE</div>
+    <div class="banner-subtitle">ABRSM initial grade up to Diploma</div>
   </div>
    
    <!-- MAIN SECTION------------>
@@ -114,10 +114,11 @@
 <div class= "container">
 
 <div class="instrument-card">
-    <img src="assets/img/pianoslide-2.jpg" alt="Image">
+    <img src="assets/img/boytrumpeter.jpeg" alt="Image">
     <div class="instrument-card-content">
       <p>
-        Get ready to tickle the ivories and unlock your musical potential with our exhilarating piano lessons! <br> <br> Whether you're a beginner or already have some experience, our passionate instructors are here to guide you on a melodic journey like no other. Immerse yourself in the captivating world of the piano as you learn to dance your fingers across the keys, unleashing enchanting melodies and harmonies. From classical masterpieces to modern tunes, our lessons combine technique, creativity, and a whole lot of fun! Prepare to embrace the rhythm, ignite your imagination, and discover the true joy of making music. <br> <br>Join us and let the piano be your ultimate expression of soulful melodies and captivating rhythms. Let's play and create music that resonates with your heart
+        Unleash your musical potential with our brass lessons! From the bold and vibrant sound of the trumpet, to the rich and resonant melodies of the trombone, and the elegance of the brass instruments, we offer 
+                             a journey into the world of expressive music. Whether you choose the triumphant trumpet, the deep tones of the trombone, or the enchanting cornet, our expert instructors will guide you in mastering your chosen instrument. Join us and let your passion soar as you embrace the joy of brass and woodwind performance.
                             
                             
       </p>
@@ -296,7 +297,7 @@
 <div class="modal">
     <div class="modal-content">
      <button type="button" onclick="closeModal()">Cancel</button>
-        <h5 class="modal-title-header">Piano Lessons Enrollment Form</h5>
+        <h5 class="modal-title-header">Trumpet Lessons Enrollment Form</h5>
         <form action="submit_enrollment.php" method="post" id="enrollmentForm">
             <label for="student_name">Student Name:</label>
             <input type="text" id="student_name" name="student_name" required>
@@ -329,7 +330,7 @@
                 <option value="cello">Cello</option>
                 <option value="viola">Viola</option>
                  <option value="voice">Voice</option>
-                <option value="trumpet">Trumpet</option>
+                <option value="piano">Piano</option>
                 <option value="flute">Flute</option>
                  <option value="trombone">Trombone</option>
                 <option value="saxophone">Saxophone</option>
@@ -352,6 +353,66 @@
 </div>
 
 <!-- Enroll Button (Can be placed anywhere in the page) -->
+<!-- Modal -->
+<div class="modal-universal">
+    <div class="modal-content">
+     <button type="button" onclick="closeModalUni()">Cancel</button>
+        <h5 class="modal-title-header">Lessons Enrollment Form</h5>
+        <form action="submit_enrollment.php" method="post" id="enrollmentForm">
+ <label for="instrument">Add another Instrument:</label>
+            <select id="instrument" name="instrument">
+                <option value="none">None</option>
+                <option value="guitar">Guitar</option>
+                <option value="violin">violin</option>
+                 <option value="organ">Organ</option>
+                <option value="cello">Cello</option>
+                <option value="viola">Viola</option>
+                 <option value="voice">Voice</option>
+                <option value="piano">Piano</option>
+                <option value="flute">Flute</option>
+                 <option value="trombone">Trombone</option>
+                <option value="saxophone">Saxophone</option>
+                <option value="clarinet">Clarinet</option>
+                <!-- Add other instruments to the dropdown as needed -->
+            </select><br><br>
+
+            <label for="student_name">Student Name:</label>
+            <input type="text" id="student_name" name="student_name" required>
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+
+            <label for="guardian_phone_number">Guardian's Phone Number:</label>
+            <input type="tel" id="guardian_phone_number" name="guardian_phone_number" required>
+
+            <label for="email_address">Email Address:</label>
+            <input type="email" id="email_address" name="email_address" required>
+
+            <label for="residence">Residence:</label>
+            <input type="text" id="residence" name="residence" required>
+<hr>
+              <label for="level">Instrument Level:</label>
+            <select id="level" name="level" required>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                 <option value="advanced">Advanced</option>
+                 </select>
+
+           
+<label>
+        <input type="checkbox" name="terms" required>
+        I have read and agree to the <a href="registration.html" target="_blank">registration terms</a>.
+    </label>
+    <br><br>
+            
+
+            <div class="buttons">
+                <input type="submit" value="Enroll">
+               
+            </div>
+        </form>
+    </div>
+</div>
 
 
 <!-- Success and Error Messages -->
@@ -389,6 +450,15 @@ function openModal() {
 // Function to close the modal
 function closeModal() {
     document.querySelector('.modal').style.display = 'none';
+}
+
+function openModalUni() {
+    document.querySelector('.modal-universal').style.display = 'flex';
+}
+
+// Function to close the modal
+function closeModalUni() {
+    document.querySelector('.modal-universal').style.display = 'none';
 }
 
 // Function to handle form submission
