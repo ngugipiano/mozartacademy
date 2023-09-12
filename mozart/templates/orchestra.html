@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mozart Academy | Nurture Talents</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/icons/treble-clef.png" rel="icon">
+  <link href="/static/assets/img/icons/treble-clef.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+  <link href="/static/assets/css/owl.carousel.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  
+
+<!---- Navbar ----------->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a class="navbar-brand text-brand" href="{{url_for("main.home")}}"><span class="color-b"> Mozart Academy</span></a>
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for("main.home")}}">Home</a>
+            <li class="nav-item">
+
+            <a class="nav-link" href="{{url_for("main.abrsm")}}">ABRSM</a>
+          </li>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href={{url_for("main.about")}}">About</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{{url_for("main.orchestra")}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lessons</a>
+            <div class="dropdown-menu">
+        <a class="dropdown-item " href="{{url_for("main.pianolesson")}}">Piano</a>
+        <a class="dropdown-item " href="{{url_for("main.organlesson")}}">Organ</a>
+        <a class="dropdown-item " href="{{url_for("main.cellolessons")}}">Cello</a>
+        <a class="dropdown-item " href="{{url_for("main.violinlessons")}}">Violin</a>
+        <a class="dropdown-item " href="{{url_for("main.violinlessons")}}">Viola</a>
+        <a class="dropdown-item " href="{{url_for("main.guitarlessons")}}">Guitar</a>
+        <a class="dropdown-item " href="{{url_for("main.saxlessons")}}">Saxophone</a>
+        <a class="dropdown-item " href="{{url_for("main.trumpetlessons")}}">Trumpet</a>
+        <a class="dropdown-item " href="{{url_for("main.woodwindlesson")}}">Clarinet</a>
+        <a class="dropdown-item " href="{{url_for("main.woodwindlesson")}}">Recorder</a>
+        <a class="dropdown-item " href="{{url_for("main.woodwindlesson")}}">Flute</a>
+        <a class="dropdown-item " href="{{url_for("main.voicelessons")}}">Voice</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="{{url_for("main.blog")}}>Blog</a>
+          </li>
+        
+
+  <li class="nav-item">
+            <a class="nav-link active " href="{{url_for("main.orchestra")}}">Orchestra</a>
+          </li>
+
+        
+        </ul>
+      </div>
+
+   <button type="button" onclick="openWhatsApp()" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+        <i class="bi bi-whatsapp"></i>
+      </button>
+
+
+
+
+
+
+      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+      Enroll here
+      </button>
+
+    </div>
+  </nav><!-- End Header/Navbar -->
+ <div class="banner orchestra">
+    <div class="banner-title">MOZART ACADEMY ORCHESTRA</div>
+    <div class="banner-subtitle">Where talents converge</div>
+  </div>
+<!-----------------------------------------ALL NEW ITEMS GO HERE------------------------------------------------------------------------>
+  <div class="container" >
+
+
+<div class="ab-newspaper-article">
+  <div class="ab-image-container">
+    <img src="/static/assets/img/orchestraslide1.jpg" alt="Image">
+  </div>
+  <div class="ab-text-container">
+    <h2>Mozart Academy of Music Orchestra</h2>
+   <p class="ab dropcap">Are you a seasoned player or just starting out on your instrument and wondering where to showcase your prowess and grow? At Mozart academy orchestra, we embrace diversity, we are organized to comprise of woodwind, brass, strings, choral and solo instruments. Do not hesitate to join us for practice and perfomance by <a href ="#contact">contacting us below.</a> </p> <br>
+
+
+<p class="ab"> Mozart academy orchestra is also a headstart for our students who have managed a significant milestone in sightreading for their instruments. It sets up the student to practice the art of perfomance and keeps them on toes to practice. <br>
+For senior players, organized practice sessions are scheduled by our leader where we focus on classical repertoire and hymns. <br><br>
+Take a look at our work in our social media channels and <a href="{{url_for("main.blog")}}"> blog </a>
+ </p>
+
+  </div>
+</div>
+  </div>
+
+
+
+
+  <div class="containers margin-def" >
+
+
+
+    <div class="blog-entry">
+      <h2>Let all things now Living.
+String quartet arr for a Trio.</h2>
+
+   
+      <p>Source: Facebook</p>
+    <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063726679068%2Fvideos%2F1383129645793876%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+    </div>
+
+    <!-- Example blog entry 2 -->
+    <div class="blog-entry">
+      <h2>Holy, Holy, Holy </h2>
+      <p>Arranged for brass, woodwind and violin </p>
+
+      <p>Source: Youtube</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bdKI6CdRI18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- Add more blog entries here -->
+
+
+
+  </div>
+
+<!------------------------------------------END ADDITIONAL ITEMS------------------------------------------------------------------------->
+
+  <section id="contact" class="contact container-fluid">
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Contact Us</h2>
+        <p>Drop us a message or comment</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>Rm 106, 2nd Floor :Geomerc Centre <br>
+              Nafrom St Along Magadi Road <br>                
+               Ongata Rongai <br>
+            Kajiado, Kenya
+              </p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>mozartacademy17@gmail.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+ 2547 27 238-647
+<br></p>
+            </div>
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6313291770716!2d36.75524807590431!3d-1.3976408357598964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05dd2a58fde9%3A0xd7ff66d3b1f6131c!2sGEOMERC%20CENTRE!5e0!3m2!1sen!2ske!4v1689942908898!5m2!1sen!2ske" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+            </div>
+          
+          
+          </div>
+
+        </div>
+
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form action=" " method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <label for="name">Subject</label>
+              <input type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="name">Message</label>
+              <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+<!-- End Contact Section -->
+
+
+<footer id="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact" id="footer-logo">
+       
+
+      <a href="{{url_for("main.home")}}" class="logo"><img src="/static/assets/img/logonoBG.png" alt="" class="img-fluid"></a>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{url_for("main.blog")}}">Blog</a></li> 
+            <li><i class="bx bx-chevron-right"></i> <a href="{{url_for("main.registration")}}">Registration Terms</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{url_for("main.hfaqs")}}">Help and FAQs</a></li>             
+            <li><i class="bx bx-chevron-right"></i> <a href="{{url_for("main.partner")}}">Partner with us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{url_for("main.abrsm")}}">ABRSM Certification</a></li>
+      
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Read more</h4>
+          <ul>
+           <li><i class="bx bx-chevron-right"></i> <a href="https://www.classicfm.com/music-news/listening-help-students-learn-study/">Benefits of learning music</a></li>           
+            <li><i class="bx bx-chevron-right"></i> <a href="https://en.wikipedia.org/wiki/Classical_music">History of classical music</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://www.classicfm.com/discover-music/latest/incredible-facts/">Fun facts</a></li>
+   
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Join Our Newsletter</h4>
+          <p>Subscribe to our newsletter to receive updates from us. Subscription is free, no advertisements.</p>
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+
+
+
+      <!-- Copywrite Text -->
+      <div class="copywrite-text d-flex align-items-center justify-content-center">Mozart Academy of Music
+<br>        
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0 social">
+        <a href="https://twitter.com/Mozartacademyke" class="twitter"><i class="bi bi-twitter"></i></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100063726679068" class="facebook"><i class="bi bi-facebook"></i></i></a>
+        <a href="https://www.youtube.com/@MozartAcademyofMusicKE" class="youtube"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.instagram.com/mozartacademyofmusic/" class="instagram"><i class="bi bi-instagram"></i></i></a>
+         <a href="https://www.tiktok.com/@mozartacademyofmusic" class="tiktok"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+  <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+</svg></a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+ 
+</footer><!-- End Footer -->
+
+      
+
+</main>
+
+<div id="preloader"></div>
+<a href="{{url_for("main.orchestra")}}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+
+<script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/assets/vendor/php-email-form/validate.js"></script>
+<script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/assets/vendor/purecounter/purecounter.js"></script>
+
+<!-- Template Main JS File -->
+
+  <script src="/static/assets/js/main.js"></script>
+
+<script>
+
+function redirectToPage(pageUrl) {
+  // Redirect to the specified page
+  window.location.href = pageUrl;
+}
+
+
+  function openWhatsApp() {
+    window.open('https://wa.me/+254727238647', '_blank');
+  }
+</script>
+
+
+</body>
+
+</html>
