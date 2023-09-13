@@ -1,12 +1,37 @@
-from flask import Blueprint
+from flask import Blueprint, request, redirect, url_for
+from mozart import mail
+from flask_mail import Message
 
 from flask import render_template
 
 main = Blueprint('main', __name__)
 
 @main.route("/")
-@main.route("/home")
+@main.route("/home", methods = ['POST', 'GET'])
 def home():
+    if request.method == 'POST':
+        title = "CLIENT MESSAGE"
+        name = request.form.get("name")
+        email = request.form.get("email")
+        subject = request.form.get('subject')
+        message = request.form.get('message')
+        sender = "noreply@app.com"
+        msg = Message(title, sender = sender,recipients=["harmonymwirigi99@gmail.com"])
+        msg_body = message
+        data = {
+            'app_name': 'TREAVILLE EDGE',
+            'title': title,
+            'body': msg_body
+        }
+        try:
+            if mail.send(msg):
+                return "EMAIL SENT"
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
+
+
+        return "email sent successfuly"
     return render_template("index.html")
 
 @main.route("/abrsm")
