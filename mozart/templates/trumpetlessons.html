@@ -38,7 +38,7 @@
         <span></span>
       </button>
 
-      <a class="navbar-brand text-brand" href="{{url_for("main.triumphant")}}"><span class="color-b"> Mozart Academy</span></a>
+      <a class="navbar-brand text-brand" href="{{url_for("main.trumpetlessons")}}"><span class="color-b"> Mozart Academy</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
@@ -94,7 +94,7 @@
 
 
 
-      <button type="button" onclick="openModalUni()" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+      <button type="button" onclick="openModalUni()" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" onclick="openModal()">
       Enroll here
       </button>
 
@@ -178,7 +178,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action=" " method="post" role="form" class="php-email-form">
+            <form action="{{ url_for("main.pianolesson")}}" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -251,7 +251,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>Subscribe to our newsletter to receive updates from us. Subscription is free, no advertisements.</p>
-            <form action="" method="post">
+            <form action="{{ url_for("main.about")}}" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
@@ -298,7 +298,7 @@
     <div class="modal-content">
      <button type="button" onclick="closeModal()">Cancel</button>
         <h5 class="modal-title-header">Trumpet Lessons Enrollment Form</h5>
-        <form action="submit_enrollment.php" method="post" id="enrollmentForm">
+        <form action="{{url_for("main.home")}}" method="post" id="enrollmentForm">                                                                                           url_for("main.home")}}" method="post" id="enrollmentForm">
             <label for="student_name">Student Name:</label>
             <input type="text" id="student_name" name="student_name" required>
 
@@ -358,7 +358,7 @@
     <div class="modal-content">
      <button type="button" onclick="closeModalUni()">Cancel</button>
         <h5 class="modal-title-header">Lessons Enrollment Form</h5>
-        <form action="submit_enrollment.php" method="post" id="enrollmentForm">
+        <form action="{{url_for("main.home")}}" method="post" id="enrollmentForm">
  <label for="instrument">Add another Instrument:</label>
             <select id="instrument" name="instrument">
                 <option value="none">None</option>
@@ -426,7 +426,7 @@
 
 
   <div id="preloader"></div>
-  <a href="{{url_for("main.triumphant")}}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="{{url_for("main.trumpetlessons")}}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
 

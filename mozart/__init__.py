@@ -12,6 +12,5 @@ def create_app(config_class = Config):
     from mozart.BLUEPRINT.routes import main
 
     app.register_blueprint(main)
-    
 
     return app

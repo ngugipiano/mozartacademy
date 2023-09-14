@@ -94,7 +94,7 @@
 
 
 
-      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" onclick="openModal2()">
       Enroll here
       </button>
 
@@ -161,7 +161,7 @@
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action=" " method="post" role="form" class="php-email-form">
+          <form action="{{ url_for("main.pianolesson")}}" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
@@ -233,7 +233,7 @@
         <div class="col-lg-4 col-md-6 footer-newsletter">
           <h4>Join Our Newsletter</h4>
           <p>Subscribe to our newsletter to receive updates from us. Subscription is free, no advertisements.</p>
-          <form action="" method="post">
+          <form action="{{ url_for("main.about")}}" method="post">
             <input type="email" name="email"><input type="submit" value="Subscribe">
           </form>
         </div>
@@ -262,7 +262,83 @@
  
 </footer><!-- End Footer -->
 
-      
+      <script>
+function openModal2() {
+    document.querySelector('.modaltwo').style.display = 'flex';
+}
+
+// Function to close the modal
+function closeModal2() {
+    document.querySelector('.modaltwo').style.display = 'none';
+}
+ </script> 
+<!-- Modal -->
+<div class="modaltwo">
+    <div class="modal-content">
+     <button type="button" class="cancel" onclick="closeModal2()">Cancel</button>
+        <h5 class="modal-title-header">Lessons Enrollment Form</h5>
+        <form action="{{ url_for("main.home")}}" method="post">
+            <label for="student_name">Student Name:</label>
+            <input type="text" id="student_name" name="student_name" required>
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+
+            <label for="guardian_phone_number">Guardian's Phone Number:</label>
+            <input type="tel" id="guardian_phone_number" name="guardian_phone_number" required>
+
+            <label for="email_address">Email Address:</label>
+            <input type="email" id="email_address" name="email_address" required>
+
+            <label for="residence">Residence:</label>
+            <input type="text" id="residence" name="residence" required>
+<hr>
+        
+
+            <label for="instrument">Choose Instrument:</label>
+            <select id="instrument" name="instrument">
+         
+                <option value="guitar">Piano</option>
+                <option value="guitar">Guitar</option>
+                <option value="violin">violin</option>
+                 <option value="organ">Organ</option>
+                <option value="cello">Cello</option>
+                <option value="viola">Viola</option>
+                 <option value="voice">Voice</option>
+                <option value="trumpet">Trumpet</option>
+                <option value="flute">Flute</option>
+                 <option value="trombone">Trombone</option>
+                <option value="saxophone">Saxophone</option>
+                <option value="clarinet">Clarinet</option>
+                <!-- Add other instruments to the dropdown as needed -->
+            </select><br><br>
+
+
+   <label for="level">Instrument Level:</label>
+            <select id="level" name="level" required>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                 <option value="advanced">Advanced</option>
+                 </select>
+
+
+<label>
+        <input type="checkbox" name="terms" required>
+        I have read and agree to the <a href="registration.html" target="_blank">registration terms</a>.
+    </label>
+    <br><br>
+            
+
+            <div class="buttons">
+                <input type="submit" value="Enroll">
+               
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Enroll Button (Can be placed anywhere in the page) -->
+
 
 </main>
 

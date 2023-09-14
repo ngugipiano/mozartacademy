@@ -1,6 +1,7 @@
 from flask import Blueprint, request, redirect, url_for
 from mozart import mail
 from flask_mail import Message
+from flask import Blueprint
 
 from flask import render_template
 
@@ -10,40 +11,84 @@ main = Blueprint('main', __name__)
 @main.route("/home", methods = ['POST', 'GET'])
 def home():
     if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = request.form. get('instrument')
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "noreply@app.com"
+        msg = Message(title, sender=sender, recipients=["ngugie12@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
+    
+    
+    return render_template("index.html")
+    
+
+@main.route("/abrsm", methods = ['POST', 'GET'])
+def abrsm():
+    return render_template("abrsm.html")
+
+@main.route("/about", methods = ['POST', 'GET'])
+def about():
+    if request.method == 'POST':
+        title = "MOZART SUBSCRIBTION"
+        sender = "noreply@app.com"
+        email = request.form.get('email')
+        msg = Message(title, sender=sender, recipients=["ngugie12@gmail.com"])
+        msg_body = "You have received a new subscription request from:"
+        data = {
+            'title': title,
+            'body': msg_body,
+            'email': email
+        }
+        msg.html = render_template("subscribers.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
+    return render_template("about.html")
+
+@main.route("/pianolesson", methods = ['POST', 'GET'])
+def pianolesson():
+    if request.method == 'POST':
         title = "CLIENT MESSAGE"
         name = request.form.get("name")
         email = request.form.get("email")
         subject = request.form.get('subject')
         message = request.form.get('message')
         sender = "noreply@app.com"
-        msg = Message(title, sender = sender,recipients=["harmonymwirigi99@gmail.com"])
-        msg_body = message
+        msg = Message(title, sender = sender,recipients=["ngugie12@gmail.com"])
         data = {
-            'app_name': 'TREAVILLE EDGE',
-            'title': title,
-            'body': msg_body
+            "name": name,
+            "email" : email,
+            'subject': subject,
+            'message' : message
         }
+        msg.html = render_template("emailtemplate.html", data = data)
         try:
             if mail.send(msg):
-                return "EMAIL SENT"
+                return redirect(url_for("main.home"))
         except Exception as e:
             print(e)
             return "the email was not sent{e}"
-
-
-        return "email sent successfuly"
-    return render_template("index.html")
-
-@main.route("/abrsm")
-def abrsm():
-    return render_template("abrsm.html")
-
-@main.route("/about")
-def about():
-    return render_template("about.html")
-
-@main.route("/pianolesson")
-def pianolesson():
     return render_template("pianolesson.html")
 
 @main.route("/organlesson")
