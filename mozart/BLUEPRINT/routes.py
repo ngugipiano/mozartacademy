@@ -18,8 +18,8 @@ def home():
         instrument = request.form. get('instrument')
         level = request.form. get('level')
         residence = request.form. get('residence')
-        sender = "noreply@app.com"
-        msg = Message(title, sender=sender, recipients=["ngugie12@gmail.com"])
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
         data ={
             'name' : name,
             'email' : email,
@@ -48,9 +48,9 @@ def abrsm():
 def about():
     if request.method == 'POST':
         title = "MOZART SUBSCRIBTION"
-        sender = "noreply@app.com"
+        sender = "customer@mozartacademyofmusic.com"
         email = request.form.get('email')
-        msg = Message(title, sender=sender, recipients=["ngugie12@gmail.com"])
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
         msg_body = "You have received a new subscription request from:"
         data = {
             'title': title,
@@ -74,8 +74,8 @@ def pianolesson():
         email = request.form.get("email")
         subject = request.form.get('subject')
         message = request.form.get('message')
-        sender = "noreply@app.com"
-        msg = Message(title, sender = sender,recipients=["ngugie12@gmail.com"])
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender = sender,recipients=["mozartacademy17@gmail.com"])
         data = {
             "name": name,
             "email" : email,
