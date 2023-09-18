@@ -42,6 +42,27 @@ def home():
 
 @main.route("/abrsm", methods = ['POST', 'GET'])
 def abrsm():
+    if request.method == 'POST':
+        title = "CLIENT MESSAGE"
+        name = request.form.get("name")
+        email = request.form.get("email")
+        subject = request.form.get('subject')
+        message = request.form.get('message')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender = sender,recipients=["mozartacademy17@gmail.com"])
+        data = {
+            "name": name,
+            "email" : email,
+            'subject': subject,
+            'message' : message
+        }
+        msg.html = render_template("emailtemplate.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("abrsm.html")
 
 @main.route("/about", methods = ['POST', 'GET'])
@@ -69,46 +90,128 @@ def about():
 @main.route("/pianolesson", methods = ['POST', 'GET'])
 def pianolesson():
     if request.method == 'POST':
-        title = "CLIENT MESSAGE"
-        name = request.form.get("name")
-        email = request.form.get("email")
-        subject = request.form.get('subject')
-        message = request.form.get('message')
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'PIANO'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
         sender = "customer@mozartacademyofmusic.com"
-        msg = Message(title, sender = sender,recipients=["mozartacademy17@gmail.com"])
-        data = {
-            "name": name,
-            "email" : email,
-            'subject': subject,
-            'message' : message
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
         }
-        msg.html = render_template("emailtemplate.html", data = data)
+        msg.html = render_template("enrolment.html", data = data)
         try:
             if mail.send(msg):
                 return redirect(url_for("main.home"))
         except Exception as e:
             print(e)
             return "the email was not sent{e}"
+    
+    
     return render_template("pianolesson.html")
 
-@main.route("/organlesson")
+@main.route("/organlesson", methods = ['POST', 'GET'])
 def organlesson():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'ORGAN'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("organlesson.html")
 
 @main.route("/blog")
 def blog():
     return render_template("blog.html")
 
-@main.route("/registration")
+@main.route("/registration", methods = ['POST', 'GET'])
 def registration():
+
     return render_template("registration.html")
 
-@main.route("/cellolessons")
+@main.route("/cellolessons", methods = ['POST', 'GET'])
 def cellolessons():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'CELLO'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("cellolessons.html")
 
-@main.route("/violinlessons")
+@main.route("/violinlessons", methods = ['POST', 'GET'])
 def violinlessons():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'VIOLIN'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("violinlessons.html")
 
 @main.route("/hfaqs")
@@ -120,27 +223,177 @@ def partner():
     return render_template("partner.html")
             
 
-@main.route("/guitarlessons")
+@main.route("/guitarlessons", methods = ['POST', 'GET'])
 def guitarlessons():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'GUITAR'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("guitarlessons.html")
 
-@main.route("/saxlessons")
+@main.route("/saxlessons", methods = ['POST', 'GET'])
 def saxlessons():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'SAX'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("saxlessons.html")
 
-@main.route("/trumpetlessons")
+@main.route("/trumpetlessons", methods = ['POST', 'GET'])
 def trumpetlessons():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'TRUMPET'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("trumpetlessons.html")
 
-@main.route("/woodwindlesson")
+@main.route("/woodwindlesson", methods = ['POST', 'GET'])
 def woodwindlesson():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'WOODWIND'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("woodwindlesson.html")
 
-@main.route("/voicelessons")
+@main.route("/voicelessons", methods = ['POST', 'GET'])
 def voicelessons():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'VOICE'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("voicelessons.html")
 
 
-@main.route("/orchestra")
+@main.route("/orchestra", methods = ['POST', 'GET'])
 def orchestra():
+    if request.method == 'POST':
+        title = "MOZART ACADEMY ENROLMENT NEWS!!!"
+        name = request.form.get('student_name')
+        email = request.form. get('email_address')
+        phonenumber = request.form. get('phone_number')
+        instrument = 'ORCHESTRA'
+        level = request.form. get('level')
+        residence = request.form. get('residence')
+        sender = "customer@mozartacademyofmusic.com"
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        data ={
+            'name' : name,
+            'email' : email,
+            'phonenumber' : phonenumber,
+            'instrument' : instrument,
+            'level' : level,
+            'residence' : residence
+        }
+        msg.html = render_template("enrolment.html", data = data)
+        try:
+            if mail.send(msg):
+                return redirect(url_for("main.home"))
+        except Exception as e:
+            print(e)
+            return "the email was not sent{e}"
     return render_template("orchestra.html")

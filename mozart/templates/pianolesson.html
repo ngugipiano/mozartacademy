@@ -177,7 +177,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="{{ url_for("main.pianolesson")}}" method="post" role="form" class="php-email-form">
+            <form action="{{ url_for("main.abrsm")}}" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -297,7 +297,7 @@
     <div class="modal-content">
      <button type="button" onclick="closeModal()">Cancel</button>
         <h5 class="modal-title-header">Piano Lessons Enrollment Form</h5>
-        <form action="{{ url_for("main.home")}}" method="post">
+        <form action="{{ url_for("main.pianolesson")}}" method="post">
             <label for="student_name">Student Name:</label>
             <input type="text" id="student_name" name="student_name" required>
 
