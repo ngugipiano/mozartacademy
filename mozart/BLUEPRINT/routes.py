@@ -2,7 +2,7 @@ from flask import Blueprint, request, redirect, url_for
 from mozart import mail
 from flask_mail import Message
 from flask import Blueprint
-
+import os
 from flask import render_template
 
 main = Blueprint('main', __name__)
@@ -19,7 +19,7 @@ def home():
         level = request.form. get('level')
         residence = request.form. get('residence')
         sender = "customer@mozartacademyofmusic.com"
-        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        msg = Message(title, sender=sender, recipients=os.environ.get('MAIL_DEFAULT_SENDER'))
         data ={
             'name' : name,
             'email' : email,
@@ -97,8 +97,8 @@ def pianolesson():
         instrument = 'PIANO'
         level = request.form. get('level')
         residence = request.form. get('residence')
-        sender = "customer@mozartacademyofmusic.com"
-        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        sender = os.environ.get('MAIL_USERNAME')
+        msg = Message(title, sender=sender, recipients=["harmonymwirigi99@gmail.com"])
         data ={
             'name' : name,
             'email' : email,
@@ -129,7 +129,7 @@ def organlesson():
         level = request.form. get('level')
         residence = request.form. get('residence')
         sender = "customer@mozartacademyofmusic.com"
-        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        msg = Message(title, sender=sender, recipients=["harmonymwirigi99@gmail.com"])
         data ={
             'name' : name,
             'email' : email,
@@ -167,7 +167,7 @@ def cellolessons():
         level = request.form. get('level')
         residence = request.form. get('residence')
         sender = "customer@mozartacademyofmusic.com"
-        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
+        msg = Message(title, sender=sender, recipients=["harmonymwirigi99@gmail.com"])
         data ={
             'name' : name,
             'email' : email,
