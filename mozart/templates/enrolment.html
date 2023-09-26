@@ -1,29 +1,112 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<html lang="en">
 
-        <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-        <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-        <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <link href="/static/assets/css/style.css" rel="stylesheet">
-        <link href="/static/assets/css/owl.carousel.css" rel="stylesheet">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    </head>
+  <!-- Favicons -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <link href="/static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+  <link href="/static/assets/css/owl.carousel.css" rel="stylesheet">
+
+
+
+</head>
+
 <body>
 
-    <h3 style="text-transform: capitalize;"> ENROLMENT INTO {{data.instrument}} CLASSES</h3>
-    <h4> Student Name: {{data.name}},</h4></n>
-    <p>The above named student has enrolled into {{data.instrument}} classes bellow are the student details:</n>
-    <li>1. Email: {{data.email}}</li>
-    <li>2. Phone number: {{data.phonenumber}}</li>
-    <li>3. Residence {{data.residence}}</li>
-    <li>4. Instruments level: {{data.level}}</li>
-    </n>
-    Thank You.
-    </p>
+  
+
+<!-----------------------------------------ALL NEW ITEMS GO HERE------------------------------------------------------------------------>
+
+
+
+  <div class="container" >
+ <div class="banner emails">
+
+    <div class="banner-subtitle"></div>
+  </div>
+   
+ <div class="email-container">
+      
+        <p><b>You have received a new enrollement request from:</b> </p>
+        
+        <div class="emailentries">
+
+   <h4> Student Name: {{data.name}},</h4>
+        </div>
+
+          <div class="emailentries">
+
+ <b>Phone Number </b>:{{data.phonenumber}}
+        </div>  
+        
+        <div class="emailentries">
+
+ <b>Email address </b>: {{data.email}}
+        </div> 
+        
+         <div class="emailentries">
+
+ <b>Residence </b>: {{data.residence}}
+        </div>  
+        
+ 
+        
+        <div class="emailentries">
+
+ <b>Instrument of choice </b>: {{data.instrument}} 
+        </div>  
+        
+        <div class="emailentries">
+
+ <b>Instrument Level </b>:{{data.level}}
+        </div>
+
+
+    </div>
+
+
+
+
+
+  </div>
+<!------------------------------------------END ADDITIONAL ITEMS------------------------------------------------------------------------->
+
+  
+      <!-- Copywrite Text -->
+      <div class="copywrite-text d-flex align-items-center justify-content-center">Mozart Academy of Music
+<br>        
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+
+      </div>
+
+      
+
+
+
+<!-- Vendor JS Files -->
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Template Main JS File -->
+
+  <script src="assets/js/main.js"></script>
+
 
 </body>
+
 </html>

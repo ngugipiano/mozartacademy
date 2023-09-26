@@ -7,8 +7,7 @@ from flask import render_template
 
 main = Blueprint('main', __name__)
 
-@main.route("/")
-@main.route("/home", methods = ['POST', 'GET'])
+@main.route("/", methods = ['POST', 'GET'])
 def home():
     if request.method == 'POST':
         title = "MOZART ACADEMY ENROLMENT NEWS!!!"
@@ -19,7 +18,7 @@ def home():
         level = request.form. get('level')
         residence = request.form. get('residence')
         sender = "customer@mozartacademyofmusic.com"
-        msg = Message(title, sender=sender, recipients=os.environ.get('MAIL_DEFAULT_SENDER'))
+        msg = Message(title, sender=sender, recipients=['harmonymwirigi99@gmail.com'])
         data ={
             'name' : name,
             'email' : email,

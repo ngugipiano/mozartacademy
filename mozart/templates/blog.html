@@ -96,7 +96,7 @@
 
 
       <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" onclick="openModal2()">
+      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" onclick="openModal()">
       Enroll here
       </button>
 
@@ -359,7 +359,7 @@ function closeModal2() {
 
 <label>
         <input type="checkbox" name="terms" required>
-        I have read and agree to the <a href="registration.html" target="_blank">registration terms</a>.
+        I have read and agree to the <a href="{{url_for('main.registration')}}" target="_blank">registration terms</a>.
     </label>
     <br><br>
             
@@ -389,21 +389,30 @@ function closeModal2() {
 
   <!-- Template Main JS File -->
 
-    <script src="/static/assets/js/main.js"></script>
+  <script src="/static/assets/js/main.js"></script>
   
   <script>
-
-  function redirectToPage(pageUrl) {
-    // Redirect to the specified page
-    window.location.href = pageUrl;
+  function openModal() {
+      document.querySelector('.modal').style.display = 'flex';
   }
-
-
-    function openWhatsApp() {
-      window.open('https://wa.me/+254727238647', '_blank');
+  
+  // Function to close the modal
+  function closeModal() {
+      document.querySelector('.modal').style.display = 'none';
+  }
+  
+  
+  
+    function redirectToPage(pageUrl) {
+      // Redirect to the specified page
+      window.location.href = pageUrl;
     }
-</script>
-
+  
+  
+      function openWhatsApp() {
+        window.open('https://wa.me/+254727238647', '_blank');
+      }
+  </script>
 
 </body>
 

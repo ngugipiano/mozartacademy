@@ -73,7 +73,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="{{url_for("main.blog")}}>Blog</a>
+            <a class="nav-link " href="{{url_for("main.blog")}}">Blog</a>
           </li>
         
 
@@ -94,7 +94,7 @@
 
 
 
-      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" onclick="openModal2()">
+      <button type="button" class="btn btn-danger recolor" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" onclick="openModal()">
       Enroll here
       </button>
 
@@ -316,11 +316,12 @@ function closeModal2() {
 }
  </script> 
 <!-- Modal -->
-<div class="modaltwo">
-    <div class="modal-content">
-     <button type="button" class="cancel" onclick="closeModal2()">Cancel</button>
-        <h5 class="modal-title-header">Lessons Enrollment Form</h5>
-        <form action="{{ url_for("main.orchestra")}}" method="post">
+<!-- Modal -->
+<div class="modal">
+  <div class="modal-content">
+   <button type="button" onclick="closeModal()" >Cancel</button>
+      <h5 class="modal-title-header">Lessons Enrollment Form</h5>
+      <form action="{{url_for("main.home")}}" method="post" id="enrollmentForm">
             <label for="student_name">Student Name:</label>
             <input type="text" id="student_name" name="student_name" required>
 
@@ -367,17 +368,12 @@ function closeModal2() {
 
 <label>
         <input type="checkbox" name="terms" required>
-        I have read and agree to the <a href="registration.html" target="_blank">registration terms</a>.
+        I have read and agree to the <a href="{{url_for('main.registration')}}" target="_blank">registration terms</a>.
     </label>
     <br><br>
-            
-
-            <div class="buttons">
-                <input type="submit" value="Enroll">
-               
-            </div>
+    <input type="submit" value="ENROLL">  
         </form>
-    </div>
+  </div>
 </div>
 
 <!-- Enroll Button (Can be placed anywhere in the page) -->
@@ -398,19 +394,29 @@ function closeModal2() {
 
 <!-- Template Main JS File -->
 
-  <script src="/static/assets/js/main.js"></script>
-
+<script src="/static/assets/js/main.js"></script>
+  
 <script>
+function openModal() {
+    document.querySelector('.modal').style.display = 'flex';
+}
 
-function redirectToPage(pageUrl) {
-  // Redirect to the specified page
-  window.location.href = pageUrl;
+// Function to close the modal
+function closeModal() {
+    document.querySelector('.modal').style.display = 'none';
 }
 
 
-  function openWhatsApp() {
-    window.open('https://wa.me/+254727238647', '_blank');
+
+  function redirectToPage(pageUrl) {
+    // Redirect to the specified page
+    window.location.href = pageUrl;
   }
+
+
+    function openWhatsApp() {
+      window.open('https://wa.me/+254727238647', '_blank');
+    }
 </script>
 
 
