@@ -18,7 +18,7 @@ def home():
         level = request.form. get('level')
         residence = request.form. get('residence')
         sender = "customer@mozartacademyofmusic.com"
-        msg = Message(title, sender=sender, recipients=['harmonymwirigi99@gmail.com'])
+        msg = Message(title, sender=sender, recipients=["mozartacademy17@gmail.com"])
         data ={
             'name' : name,
             'email' : email,
